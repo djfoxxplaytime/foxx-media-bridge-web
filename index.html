@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" href="/foxx-media-bridge-web/icons/icon-192.png">
   <link rel="manifest" href="/foxx-media-bridge-web/manifest.webmanifest">
   <title>FOXX Media Bridge | Private Media Workspace</title>
-  <script type="module" crossorigin src="/foxx-media-bridge-web/assets/index-Dw9d2RW3.js"></script>
+  <script type="module" crossorigin src="/foxx-media-bridge-web/assets/index-CDsJo34P.js"></script>
   <link rel="stylesheet" crossorigin href="/foxx-media-bridge-web/assets/index-Bt9AIL-B.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
     </nav>
     <div class="side-grow"></div>
     <div class="side-tip"><span class="tip-symbol">✦</span><strong>Created for creators.</strong><p>Your files stay on your device until you choose to share or upload them.</p></div>
-    <div class="side-foot">FOXX MEDIA BRIDGE <span>v0.2 WEB / iPHONE BETA</span></div>
+    <div class="side-foot">FOXX MEDIA BRIDGE <span>v0.3 WEB / iPHONE PREVIEW</span></div>
   </aside>
   <div class="workspace">
     <header class="topbar"><div class="topbar-mobile-logo"><span class="tiny-f">F</span><strong>FOXX <span>BRIDGE</span></strong></div><span class="live-dot"></span><span class="top-status">PRIVATE WORKSPACE</span><div class="topbar-grow"></div><button type="button" id="installBtn" class="mini-install" hidden>＋ Install app</button><div class="top-avatar">F</div></header>
@@ -46,8 +46,8 @@
           </div>
           <input type="file" id="fileInput" accept="video/*,image/*,audio/*,.heic,.heif,.mkv" multiple hidden>
           <div class="two-columns">
-            <div class="panel"><div class="panel-caption"><span class="panel-icon">⌁</span> DIRECT MEDIA LINK</div><h3>Paste a media URL</h3><p>Import a public HTTPS link to an actual photo, video or audio file.</p><label for="mediaUrl" class="field-label">FILE URL</label><input id="mediaUrl" class="control" type="url" placeholder="https://example.com/video.mp4" autocomplete="off"><label class="checkbox-line"><input id="mediaRights" type="checkbox"><span>I own this media or have permission to download it.</span></label><button type="button" id="importUrlBtn" class="btn btn-outline full-width">↓ Download media</button><p class="micro-note">The source must allow browser downloads (CORS). Ordinary social-post webpages are not direct files.</p></div>
-            <div class="panel purple-panel"><div class="panel-caption"><span class="panel-icon">▥</span> SOCIAL PLATFORM LINKS</div><h3>What works on iPhone and web?</h3><p>Browser security and platform restrictions mean Instagram/TikTok/Facebook post webpages are not direct video files. We cannot promise a post-link download here.</p><div class="platforms"><span>IG</span><span>TT</span><span>YT</span><span>FB</span></div><p class="soft-separator"></p><div class="compact-info"><span class="pulse-icon">⌘</span><span>For your own posts, use the platform's supported <b>Save / Download</b> control where available, then tap <b>Choose files</b> above. Direct public media-file links can also be imported when the source permits browser access.</span></div></div>
+            <div class="panel"><div class="panel-caption"><span class="panel-icon">⌁</span> PUBLIC INSTAGRAM OR DIRECT MEDIA LINK</div><h3>Paste your Instagram post link</h3><p>Save an accessible public Instagram photo or video, or download a direct HTTPS media file. The preview looks up public media without asking for your Instagram password.</p><label for="mediaUrl" class="field-label">INSTAGRAM / VIDEO LINK</label><input id="mediaUrl" class="control" type="url" placeholder="https://www.instagram.com/p/..." autocomplete="off"><label class="checkbox-line"><input id="mediaRights" type="checkbox"><span>I own this media or have permission to download it.</span></label><button type="button" id="importUrlBtn" class="btn btn-outline full-width">↓ Save public media</button><p class="micro-note">Instagram public posts are tested through the FOXX temporary preview service. Private posts, stories, carousels and platform-blocked posts may not work. Saving first adds the file to your browser Library. Tap Save there to export to iPhone Files/Photos.</p></div>
+            <div class="panel purple-panel"><div class="panel-caption"><span class="panel-icon">▥</span> SOCIAL PLATFORM LINKS</div><h3>Instagram public-post preview</h3><p>This preview can look up a public Instagram post and save one video or image when Instagram exposes it. TikTok/Facebook and private posts remain unsupported.</p><div class="platforms"><span>IG</span><span>TT</span><span>YT</span><span>FB</span></div><p class="soft-separator"></p><div class="compact-info"><span class="pulse-icon">⌘</span><span>When the Instagram lookup succeeds, the media appears in your <b>Library</b>. Tap <b>Save</b> there to export. If the site blocks extraction, use its official Save/Download control for your own post and then choose the saved file above.</span></div></div>
           </div>
         </section>
         <section class="page" data-page="convert">
