@@ -12,8 +12,8 @@
   <link rel="apple-touch-icon" href="/foxx-media-bridge-web/icons/icon-192.png">
   <link rel="manifest" href="/foxx-media-bridge-web/manifest.webmanifest">
   <title>FOXX Media Bridge | Private Media Workspace</title>
-  <script type="module" crossorigin src="/foxx-media-bridge-web/assets/index-CDsJo34P.js"></script>
-  <link rel="stylesheet" crossorigin href="/foxx-media-bridge-web/assets/index-Bt9AIL-B.css">
+  <script type="module" crossorigin src="/foxx-media-bridge-web/assets/index-TMnQE_9o.js"></script>
+  <link rel="stylesheet" crossorigin href="/foxx-media-bridge-web/assets/index-Df7wTbVK.css">
 </head>
 <body>
 <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
@@ -29,7 +29,7 @@
     </nav>
     <div class="side-grow"></div>
     <div class="side-tip"><span class="tip-symbol">✦</span><strong>Created for creators.</strong><p>Your files stay on your device until you choose to share or upload them.</p></div>
-    <div class="side-foot">FOXX MEDIA BRIDGE <span>v0.3 WEB / iPHONE PREVIEW</span></div>
+    <div class="side-foot">FOXX MEDIA BRIDGE <span>v0.3.1 REEL VIDEO FIX</span></div>
   </aside>
   <div class="workspace">
     <header class="topbar"><div class="topbar-mobile-logo"><span class="tiny-f">F</span><strong>FOXX <span>BRIDGE</span></strong></div><span class="live-dot"></span><span class="top-status">PRIVATE WORKSPACE</span><div class="topbar-grow"></div><button type="button" id="installBtn" class="mini-install" hidden>＋ Install app</button><div class="top-avatar">F</div></header>
@@ -37,7 +37,7 @@
       <div class="content-wrap">
         <section class="page visible" data-page="import">
           <div class="heading-block"><div class="eyebrow"><span class="eyebrow-line"></span> YOUR CREATIVE TOOLKIT</div><h1>Your media.<br><em>No boundaries.</em></h1><p>Bring your videos, pictures and sound together. Convert, organize and create, directly in your browser.</p></div>
-          <div class="quick-stats"><div class="stat"><div class="stat-top"><span>◩</span> YOUR LIBRARY</div><strong id="fileCount">0</strong><small>Files ready</small></div><div class="stat"><div class="stat-top"><span>⬡</span> EXPORT QUALITY</div><strong>4K<span class="stat-suffix"> UHD</span></strong><small>Device permitting</small></div><div class="stat"><div class="stat-top"><span>◉</span> YOUR PRIVACY</div><strong>Local</strong><small>By default</small></div></div>
+          <div class="quick-stats"><div class="stat"><div class="stat-top"><span>◩</span> YOUR LIBRARY</div><strong id="fileCount">0</strong><small>Files ready</small></div><div class="stat"><div class="stat-top"><span>⬡</span> EXPORT QUALITY</div><strong>Original<span class="stat-suffix"> quality</span></strong><small>No forced downscaling</small></div><div class="stat"><div class="stat-top"><span>◉</span> YOUR PRIVACY</div><strong>Local</strong><small>By default</small></div></div>
           <div class="section-head"><h2>Bring in your content</h2><span class="section-note">STEP 01 · IMPORT</span></div>
           <div id="dropzone" class="dropzone" role="button" tabindex="0" aria-label="Choose media to import">
             <div class="upload-icon"><svg width="33" height="33" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V3m-5 5 5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></div>
@@ -46,8 +46,8 @@
           </div>
           <input type="file" id="fileInput" accept="video/*,image/*,audio/*,.heic,.heif,.mkv" multiple hidden>
           <div class="two-columns">
-            <div class="panel"><div class="panel-caption"><span class="panel-icon">⌁</span> PUBLIC INSTAGRAM OR DIRECT MEDIA LINK</div><h3>Paste your Instagram post link</h3><p>Save an accessible public Instagram photo or video, or download a direct HTTPS media file. The preview looks up public media without asking for your Instagram password.</p><label for="mediaUrl" class="field-label">INSTAGRAM / VIDEO LINK</label><input id="mediaUrl" class="control" type="url" placeholder="https://www.instagram.com/p/..." autocomplete="off"><label class="checkbox-line"><input id="mediaRights" type="checkbox"><span>I own this media or have permission to download it.</span></label><button type="button" id="importUrlBtn" class="btn btn-outline full-width">↓ Save public media</button><p class="micro-note">Instagram public posts are tested through the FOXX temporary preview service. Private posts, stories, carousels and platform-blocked posts may not work. Saving first adds the file to your browser Library. Tap Save there to export to iPhone Files/Photos.</p></div>
-            <div class="panel purple-panel"><div class="panel-caption"><span class="panel-icon">▥</span> SOCIAL PLATFORM LINKS</div><h3>Instagram public-post preview</h3><p>This preview can look up a public Instagram post and save one video or image when Instagram exposes it. TikTok/Facebook and private posts remain unsupported.</p><div class="platforms"><span>IG</span><span>TT</span><span>YT</span><span>FB</span></div><p class="soft-separator"></p><div class="compact-info"><span class="pulse-icon">⌘</span><span>When the Instagram lookup succeeds, the media appears in your <b>Library</b>. Tap <b>Save</b> there to export. If the site blocks extraction, use its official Save/Download control for your own post and then choose the saved file above.</span></div></div>
+            <div class="panel"><div class="panel-caption"><span class="panel-icon">⌁</span> PUBLIC INSTAGRAM OR DIRECT MEDIA LINK</div><h3>Paste your Instagram post link</h3><p>Save an accessible public Instagram photo or video, or download a direct HTTPS media file. The preview looks up public media without asking for your Instagram password.</p><label for="mediaUrl" class="field-label">INSTAGRAM / VIDEO LINK</label><input id="mediaUrl" class="control" type="url" placeholder="https://www.instagram.com/p/..." autocomplete="off"><label for="instagramMediaType" class="field-label">IMPORT AS</label><select id="instagramMediaType" class="control"><option value="video" selected>Video (full MP4, with sound)</option><option value="image">Photo (JPG / cover image)</option></select><label class="checkbox-line"><input id="mediaRights" type="checkbox"><span>I own this media or have permission to download it.</span></label><button type="button" id="importUrlBtn" class="btn btn-outline full-width">↓ Save public media</button><p class="micro-note">Instagram public posts are tested through the FOXX temporary preview service. Private posts, stories, carousels and platform-blocked posts may not work. Saving first adds the file to your browser Library. Tap Save there to export to iPhone Files/Photos.</p></div>
+            <div class="panel purple-panel"><div class="panel-caption"><span class="panel-icon">▥</span> SOCIAL PLATFORM LINKS</div><h3>Instagram public-post preview</h3><p>Choose Video for an MP4 with sound, or Photo for a JPG. A video request never silently saves a cover image. TikTok/Facebook and private posts remain unsupported.</p><div class="platforms"><span>IG</span><span>TT</span><span>YT</span><span>FB</span></div><p class="soft-separator"></p><div class="compact-info"><span class="pulse-icon">⌘</span><span>When the Instagram lookup succeeds, the media appears in your <b>Library</b>. Tap <b>Save</b> there to export. If the site blocks extraction, use its official Save/Download control for your own post and then choose the saved file above.</span></div></div>
           </div>
         </section>
         <section class="page" data-page="convert">
@@ -56,13 +56,13 @@
             <div class="form-grid">
               <label class="field"><span class="field-label">SOURCE FILE</span><select id="sourceSelect" class="control"><option value="">Choose a file from library</option></select></label>
               <label class="field"><span class="field-label">OUTPUT FORMAT</span><select id="outputFormat" class="control"><option value="mp4">MP4 · Video</option></select></label>
-              <label class="field"><span class="field-label">RESOLUTION</span><select id="presetSelect" class="control"><option value="original">Original size</option><option value="720p">HD 720p</option><option value="1080p" selected>Full HD 1080p</option><option value="1440p">QHD 1440p</option><option value="4k">4K UHD 2160p</option></select></label>
+              <label class="field"><span class="field-label">RESOLUTION</span><select id="presetSelect" class="control"><option value="original">Original size</option><option value="720p">HD 720p</option><option value="1080p" selected>Full HD 1080p</option><option value="1440p">QHD 1440p</option><option value="4k">4K UHD 2160p (device permitting)</option><option value="8k">8K UHD 4320p (images / desktop video)</option></select></label>
               <label class="field"><span class="field-label">VIDEO QUALITY</span><select id="qualitySelect" class="control"><option value="20">Higher quality · larger file</option><option value="25" selected>Balanced</option><option value="29">Smaller file</option></select></label>
             </div>
             <label class="toggle-row"><span><strong>Allow upscaling</strong><small>Enlarge smaller sources. Upscaling cannot restore missing detail.</small></span><input type="checkbox" id="upscaleToggle" class="toggle"></label>
             <div class="convert-hint" id="sourceSummary"><span class="hint-glyph">◈</span><div><strong>No source selected</strong><small>Import or choose a file to see conversion details.</small></div></div>
             <button type="button" id="convertBtn" class="btn btn-primary convert-button">✦ Convert & save to library</button>
-            <p class="micro-note">Photo conversion runs locally. Video conversion loads FFmpeg WebAssembly (~30 MB) on first use and is resource-intensive on phones. For large or 4K video projects, use the Windows app.</p>
+            <p class="micro-note">Photo conversion runs locally. Video conversion loads FFmpeg WebAssembly (~30 MB) on first use and is resource-intensive on phones. 4K and 8K presets are visible, but high-resolution video transcoding is not supported on iPhone Safari. Selecting a preset cannot create missing source detail. Export the original MP4 to preserve its genuine quality, or use a capable desktop encoder for 4K/8K upscaling.</p>
           </div>
         </section>
         <section class="page" data-page="library">
