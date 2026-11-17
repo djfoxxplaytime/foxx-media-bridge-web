@@ -12,8 +12,8 @@
   <link rel="apple-touch-icon" href="/foxx-media-bridge-web/icons/icon-192.png">
   <link rel="manifest" href="/foxx-media-bridge-web/manifest.webmanifest">
   <title>FOXX Media Bridge | Private Media Workspace</title>
-  <script type="module" crossorigin src="/foxx-media-bridge-web/assets/index-yNho-UnT.js"></script>
-  <link rel="stylesheet" crossorigin href="/foxx-media-bridge-web/assets/index-B69IGuN1.css">
+  <script type="module" crossorigin src="/foxx-media-bridge-web/assets/index-U5eiOSTc.js"></script>
+  <link rel="stylesheet" crossorigin href="/foxx-media-bridge-web/assets/index-BVysspyI.css">
 </head>
 <body>
 <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
@@ -29,7 +29,7 @@
     </nav>
     <div class="side-grow"></div>
     <div class="side-tip"><span class="tip-symbol">✦</span><strong>Created for creators.</strong><p>Your files stay on your device until you choose to share or upload them.</p></div>
-    <div class="side-foot">FOXX MEDIA BRIDGE <span>v0.3.4 LONG MP3</span></div>
+    <div class="side-foot">FOXX MEDIA BRIDGE <span>v0.3.5 320K AUDIO FIX</span></div>
   </aside>
   <div class="workspace">
     <header class="topbar"><div class="topbar-mobile-logo"><span class="tiny-f">F</span><strong>FOXX <span>BRIDGE</span></strong></div><span class="live-dot"></span><span class="top-status">PRIVATE WORKSPACE</span><div class="topbar-grow"></div><button type="button" id="installBtn" class="mini-install" hidden>＋ Install app</button><div class="top-avatar">F</div></header>
@@ -85,19 +85,28 @@
             <select id="audioBitrate" class="control">
               <option value="64">64 kbps · smaller file for very long recordings</option>
               <option value="96">96 kbps · long mixes</option>
-              <option value="128" selected>128 kbps · balanced</option>
+              <option value="128">128 kbps · balanced</option>
               <option value="192">192 kbps · high quality</option>
-              <option value="320">320 kbps · largest file</option>
+              <option value="320" selected>320 kbps · highest output bitrate</option>
             </select>
             <label class="checkbox-line"><input id="audioRights" type="checkbox"><span>I own or have permission to download and convert this recording.</span></label>
             <button id="audioStart" type="button" class="btn btn-primary full-width">♫ Convert YouTube to MP3</button>
+            <div class="audio-local-route" id="audioLocalRoute">
+              <strong>Or convert a file without YouTube access</strong>
+              <p>If YouTube requests login/bot verification, download your own video through YouTube Studio or choose a recording already saved to Files. FOXX will convert its real audio to MP3, including longer recordings.</p>
+              <label class="field-label" for="audioLocalFile">VIDEO OR AUDIO FILE ON THIS DEVICE</label>
+              <input class="control" id="audioLocalFile" type="file" accept="video/*,audio/*,.mp4,.mov,.mkv,.webm,.m4v,.wav,.m4a,.mp3,.flac,.aac,.ogg,.opus">
+              <button id="audioLocalStart" type="button" class="btn btn-outline full-width">♫ Convert selected file to 320 kbps MP3</button>
+              <p class="micro-note">Files up to 3 GB. The file uploads securely in 4 MB chunks, so keep this page open until uploading completes. MP3 encoding then continues on the server. Output remains available for up to 24 hours.</p>
+              <a class="audio-studio-link" href="https://studio.youtube.com/" target="_blank" rel="noopener noreferrer">Open YouTube Studio for your own uploads</a>
+            </div>
             <div id="audioJobPanel" class="audio-job-panel" role="status" aria-live="polite" hidden>
               <strong id="audioJobState">Checking YouTube audio</strong>
               <p id="audioJobMessage">Checking this public recording.</p>
               <small id="audioJobDetails"></small>
               <a id="audioDownload" class="btn btn-primary full-width" download hidden>↓ Download MP3 to Files</a>
             </div>
-            <p class="micro-note">Only publicly accessible videos are supported. YouTube may require sign-in or block server downloads. Long files are streamed directly to Files, not stored in the browser Library. Finished conversions remain available for up to 24 hours.</p>
+            <p class="micro-note">320 kbps is the MP3 encoding bitrate, not proof of 320 kbps source quality. YouTube links can be blocked; the local-file route above does not depend on anonymous YouTube extraction.  Long files are streamed directly to Files, not stored in the browser Library. Finished conversions remain available for up to 24 hours.</p>
           </div>
           <div class="two-columns yt-columns">
             <div class="panel"><div class="panel-caption"><span class="yt-mark">▶</span> YOUTUBE CONNECTION</div><h3>Your channel, your control</h3><p>Sign in only through Google's official consent window. Your OAuth access token is held in memory and isn't stored in the media library.</p><label class="field-label" for="webClientId">GOOGLE WEB OAUTH CLIENT ID</label><input id="webClientId" class="control" placeholder="....apps.googleusercontent.com" spellcheck="false" autocomplete="off"><button type="button" id="connectYoutube" class="btn btn-outline full-width">Connect YouTube</button><div class="yt-status" id="youtubeStatus"><span class="status-dot"></span> Not connected</div><p class="micro-note">Requires an authorized Web OAuth client in the FOXX Media Bridge Google Cloud project with this website registered as an origin.</p></div>
