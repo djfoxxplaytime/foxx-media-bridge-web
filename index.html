@@ -12,8 +12,8 @@
   <link rel="apple-touch-icon" href="/foxx-media-bridge-web/icons/icon-192.png">
   <link rel="manifest" href="/foxx-media-bridge-web/manifest.webmanifest">
   <title>FOXX Media Bridge | Private Media Workspace</title>
-  <script type="module" crossorigin src="/foxx-media-bridge-web/assets/index-xblfrDUf.js"></script>
-  <link rel="stylesheet" crossorigin href="/foxx-media-bridge-web/assets/index-Df7wTbVK.css">
+  <script type="module" crossorigin src="/foxx-media-bridge-web/assets/index-CyySnIKu.js"></script>
+  <link rel="stylesheet" crossorigin href="/foxx-media-bridge-web/assets/index-HoLzTVf3.css">
 </head>
 <body>
 <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
@@ -29,7 +29,7 @@
     </nav>
     <div class="side-grow"></div>
     <div class="side-tip"><span class="tip-symbol">✦</span><strong>Created for creators.</strong><p>Your files stay on your device until you choose to share or upload them.</p></div>
-    <div class="side-foot">FOXX MEDIA BRIDGE <span>v0.3.2 SOCIAL VIDEO FIX</span></div>
+    <div class="side-foot">FOXX MEDIA BRIDGE <span>v0.3.3 IPHONE LAYOUT FIX</span></div>
   </aside>
   <div class="workspace">
     <header class="topbar"><div class="topbar-mobile-logo"><span class="tiny-f">F</span><strong>FOXX <span>BRIDGE</span></strong></div><span class="live-dot"></span><span class="top-status">PRIVATE WORKSPACE</span><div class="topbar-grow"></div><button type="button" id="installBtn" class="mini-install" hidden>＋ Install app</button><div class="top-avatar">F</div></header>
@@ -46,7 +46,7 @@
           </div>
           <input type="file" id="fileInput" accept="video/*,image/*,audio/*,.heic,.heif,.mkv" multiple hidden>
           <div class="two-columns">
-            <div class="panel"><div class="panel-caption"><span class="panel-icon">⌁</span> PUBLIC SOCIAL VIDEO OR DIRECT MEDIA LINK</div><h3>Paste a social video link</h3><p>Import accessible public Instagram, Facebook, TikTok and YouTube videos, or direct HTTPS media files. Some posts require platform login and cannot be imported.</p><label for="mediaUrl" class="field-label">SOCIAL VIDEO / MEDIA LINK</label><input id="mediaUrl" class="control" type="url" placeholder="Paste Facebook Reel, Instagram, TikTok or YouTube URL" autocomplete="off"><label for="instagramMediaType" class="field-label">IMPORT AS</label><select id="instagramMediaType" class="control"><option value="video" selected>Video (full MP4, with sound)</option><option value="image">Photo (JPG / cover image)</option></select><label class="checkbox-line"><input id="mediaRights" type="checkbox"><span>I own this media or have permission to download it.</span></label><button type="button" id="importUrlBtn" class="btn btn-outline full-width">↓ Save public media</button><p class="micro-note">Public posts are checked through the FOXX media server. Login-required, private, DRM-protected and platform-blocked videos cannot be accessed. Saving first adds the file to your browser Library. Tap Save there to export to iPhone Files/Photos.</p></div>
+            <div class="panel"><div class="panel-caption"><span class="panel-icon">⌁</span> PUBLIC SOCIAL VIDEO OR DIRECT MEDIA LINK</div><h3>Paste a social video link</h3><p>Import accessible public Instagram, Facebook, TikTok and YouTube videos, or direct HTTPS media files. Some posts require platform login and cannot be imported.</p><label for="mediaUrl" class="field-label">SOCIAL VIDEO / MEDIA LINK</label><input id="mediaUrl" class="control" type="url" placeholder="Paste Facebook Reel, Instagram, TikTok or YouTube URL" autocomplete="off"><label for="instagramMediaType" class="field-label">IMPORT AS</label><select id="instagramMediaType" class="control"><option value="video" selected>Video (full MP4, with sound)</option><option value="image">Photo (JPG / cover image)</option></select><label class="checkbox-line"><input id="mediaRights" type="checkbox"><span>I own this media or have permission to download it.</span></label><button type="button" id="importUrlBtn" class="btn btn-outline full-width">↓ Save public media</button><div id="importFeedback" class="import-feedback" role="alert" aria-live="polite" hidden><strong id="importFeedbackTitle">Could not import video</strong><p id="importFeedbackText"></p><div class="import-feedback-actions"><button id="importChooseFile" type="button">Choose video file</button><button id="importOpenSource" type="button" hidden>Open source</button><button id="importDismiss" type="button">Dismiss</button></div></div><p class="micro-note">Public posts are checked through the FOXX media server. Login-required, private, DRM-protected and platform-blocked videos cannot be accessed. Saving first adds the file to your browser Library. Tap Save there to export to iPhone Files/Photos.</p></div>
             <div class="panel purple-panel"><div class="panel-caption"><span class="panel-icon">▥</span> SOCIAL PLATFORM LINKS</div><h3>Social video importer</h3><p>Choose Video to retrieve a publicly available MP4, never a cover photo. Facebook, Instagram, TikTok and YouTube links are accepted; platforms may block extraction or require login. Photo import supports public Instagram posts.</p><div class="platforms"><span>IG</span><span>TT</span><span>YT</span><span>FB</span></div><p class="soft-separator"></p><div class="compact-info"><span class="pulse-icon">⌘</span><span>When the public media lookup succeeds, your file appears in your <b>Library</b>. Tap <b>Save</b> there to export. If the site blocks extraction, use its official Save/Download control for your own post and then choose the saved file above.</span></div></div>
           </div>
         </section>
