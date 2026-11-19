@@ -12,8 +12,8 @@
   <link rel="apple-touch-icon" href="/foxx-media-bridge-web/icons/icon-192.png">
   <link rel="manifest" href="/foxx-media-bridge-web/manifest.webmanifest">
   <title>FOXX Media Bridge | Private Media Workspace</title>
-  <script type="module" crossorigin src="/foxx-media-bridge-web/assets/index-alpnwljF.js"></script>
-  <link rel="stylesheet" crossorigin href="/foxx-media-bridge-web/assets/index-Di-EpIkc.css">
+  <script type="module" crossorigin src="/foxx-media-bridge-web/assets/index-C-7BP2a4.js"></script>
+  <link rel="stylesheet" crossorigin href="/foxx-media-bridge-web/assets/index-BscNa6lR.css">
 </head>
 <body>
 <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
@@ -29,7 +29,7 @@
     </nav>
     <div class="side-grow"></div>
     <div class="side-tip"><span class="tip-symbol">✦</span><strong>Created for creators.</strong><p>Your files stay on your device until you choose to share or upload them.</p></div>
-    <div class="side-foot">FOXX MEDIA BRIDGE <span>v0.3.6 YOUTUBE ACCESS CLARITY</span></div>
+    <div class="side-foot">FOXX MEDIA BRIDGE <span>v0.3.7 WEB PROVIDER OPTION</span></div>
   </aside>
   <div class="workspace">
     <header class="topbar"><div class="topbar-mobile-logo"><span class="tiny-f">F</span><strong>FOXX <span>BRIDGE</span></strong></div><span class="live-dot"></span><span class="top-status">PRIVATE WORKSPACE</span><div class="topbar-grow"></div><button type="button" id="installBtn" class="mini-install" hidden>＋ Install app</button><div class="top-avatar">F</div></header>
@@ -90,14 +90,21 @@
               <option value="320" selected>320 kbps · highest output bitrate</option>
             </select>
             <label class="checkbox-line"><input id="audioRights" type="checkbox"><span>I own or have permission to download and convert this recording.</span></label>
-            <button id="audioStart" type="button" class="btn btn-outline full-width">Try public YouTube link → MP3 (access may be blocked)</button>
+            <div class="audio-external-option" id="audioExternalOption">
+              <strong>External online converter · independent of FOXX's blocked server</strong>
+              <p>Use the converter website you selected for videos you have permission to download. FOXX can copy your YouTube URL and open that website in a new browser tab. The external provider handles conversion and offers its own formats and bitrates.</p>
+              <a id="audioOpenExternal" class="btn btn-primary full-width" href="https://yt1s.com.co/download/" target="_blank" rel="noopener noreferrer">Copy YouTube link + Open YT1s</a>
+              <p id="audioExternalNotice" class="micro-note" role="status" aria-live="polite">Third-party website: yt1s.com.co. FOXX does not control its uptime, downloads, adverts, availability or MP3 bitrate. Check the resulting file before using it.</p>
+            </div>
+            <button id="audioStart" type="button" class="btn btn-outline full-width">Try FOXX server conversion (may be blocked)</button>
             <div id="audioJobPanel" class="audio-job-panel" role="status" aria-live="polite" hidden>
               <strong id="audioJobState">Checking YouTube audio</strong>
               <p id="audioJobMessage">Checking this public recording.</p>
               <small id="audioJobDetails"></small>
               <div id="audioBlockedActions" class="audio-blocked-actions" hidden>
                 <p><strong>320 kbps is ready for files you can access.</strong> YouTube has blocked this link at the source. Signing into YouTube in Safari does not grant the FOXX server access to your session.</p>
-                <button id="audioChooseAfterBlock" type="button" class="btn btn-primary full-width">Choose file → Convert to 320 kbps MP3</button>
+                <a id="audioOpenAfterBlock" class="btn btn-primary full-width" href="https://yt1s.com.co/download/" target="_blank" rel="noopener noreferrer">Copy link + Open external converter</a>
+                <button id="audioChooseAfterBlock" type="button" class="btn btn-outline full-width">Choose a file → Encode 320 kbps MP3 in FOXX</button>
                 <a href="https://studio.youtube.com/" rel="noopener noreferrer" target="_blank">Download your own upload from YouTube Studio</a>
               </div>
               <a id="audioDownload" class="btn btn-primary full-width" download hidden>↓ Download MP3 to Files</a>
