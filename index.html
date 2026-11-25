@@ -12,8 +12,8 @@
   <link rel="apple-touch-icon" href="/foxx-media-bridge-web/icons/icon-192.png">
   <link rel="manifest" href="/foxx-media-bridge-web/manifest.webmanifest">
   <title>FOXX Media Bridge | Private Media Workspace</title>
-  <script type="module" crossorigin src="/foxx-media-bridge-web/assets/index-Dupyfvf0.js"></script>
-  <link rel="stylesheet" crossorigin href="/foxx-media-bridge-web/assets/index-D0_KxXCp.css">
+  <script type="module" crossorigin src="/foxx-media-bridge-web/assets/index-Bq0925n4.js"></script>
+  <link rel="stylesheet" crossorigin href="/foxx-media-bridge-web/assets/index-BVmABS7S.css">
 </head>
 <body>
 <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
@@ -29,7 +29,7 @@
     </nav>
     <div class="side-grow"></div>
     <div class="side-tip"><span class="tip-symbol">✦</span><strong>Created for creators.</strong><p>Your files stay on your device until you choose to share or upload them.</p></div>
-    <div class="side-foot">FOXX MEDIA BRIDGE <span>v0.3.8 FULL IMAGE NO CROP</span></div>
+    <div class="side-foot">FOXX MEDIA BRIDGE <span>v0.3.9 INSTAGRAM SOURCE QUALITY</span></div>
   </aside>
   <div class="workspace">
     <header class="topbar"><div class="topbar-mobile-logo"><span class="tiny-f">F</span><strong>FOXX <span>BRIDGE</span></strong></div><span class="live-dot"></span><span class="top-status">PRIVATE WORKSPACE</span><div class="topbar-grow"></div><button type="button" id="installBtn" class="mini-install" hidden>＋ Install app</button><div class="top-avatar">F</div></header>
@@ -71,7 +71,7 @@
           <div class="section-head"><h2>Saved media <span class="count-inline" id="libraryCount">0</span></h2><button type="button" id="libraryAdd" class="btn btn-outline btn-small">＋ Add media</button></div>
           <div id="libraryList" class="media-grid"></div>
           <div id="libraryEmpty" class="empty-state"><div class="empty-icon">▤</div><h3>Your library is waiting</h3><p>Import a file to begin your next creation.</p><button type="button" id="emptyImportBtn" class="btn btn-primary">Import media</button></div>
-          <p class="micro-note library-footnote">For full-size posters: use <strong>Save Original</strong> to keep the source file unchanged, or <strong>HQ Status · No Crop</strong> to create a 1080×1920 lossless PNG with safe margins for vertical stories. WhatsApp may recompress media after sharing. Files are stored privately in this browser's local storage. Clearing site data, using Private Browsing, or uninstalling the browser may remove saved media. Export important files to Photos or Files.</p>
+          <p class="micro-note library-footnote">Instagram may supply a square cropped 640px preview instead of the full post. FOXX now warns about such source images; importing the original file from Photos or Files is necessary if Instagram does not expose the full artwork. For full-size posters: use <strong>Save Original</strong> to keep the source file unchanged, or <strong>HQ Status · No Crop</strong> to create a 1080×1920 lossless PNG with safe margins for vertical stories. WhatsApp may recompress media after sharing. Files are stored privately in this browser's local storage. Clearing site data, using Private Browsing, or uninstalling the browser may remove saved media. Export important files to Photos or Files.</p>
         </section>
         <section class="page" data-page="youtube">
           <div class="heading-block"><div class="eyebrow"><span class="eyebrow-line"></span> SHARE YOUR WORK</div><h1>YouTube<br><em>audio studio.</em></h1><p>Convert an accessible YouTube recording into MP3, or publish your own media to your YouTube channel.</p></div>
@@ -140,7 +140,9 @@
 <div id="photoViewer" class="photo-viewer" hidden role="dialog" aria-modal="true" aria-label="Full-size original image preview">
   <button id="photoViewerClose" type="button" class="photo-viewer-close" aria-label="Close full image">× Close</button>
   <div id="photoViewerLabel" class="photo-viewer-label">FULL ORIGINAL</div>
-  <img id="photoViewerImage" alt="Full original image, fitted without cropping">
+  <img id="photoViewerImage" alt="Entire available file, displayed without cropping">
+  <div id="photoViewerWarning" class="photo-viewer-warning" role="note" hidden></div>
+  <button id="photoViewerChooseOriginal" class="photo-viewer-select-original" type="button" hidden>Choose full-quality photo from device</button>
 </div>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <div class="task-overlay" id="taskOverlay" hidden><div class="task-modal"><div class="loader-ring"></div><h3 id="taskTitle">Processing media</h3><p id="taskSubtitle">The current operation runs locally in this browser.</p><div class="progress-track"><div id="taskProgress"></div></div><span id="progressPct">Working…</span><button type="button" id="cancelTask" class="btn btn-outline btn-small">Cancel</button></div></div>
