@@ -1,4 +1,4 @@
-const VERSION='foxx-bridge-web-v10-independent-provider';
+const VERSION='foxx-bridge-web-v11-full-image-status';
 const BASE=new URL(self.registration.scope).pathname;
 const CORE=[BASE,BASE+'index.html',BASE+'manifest.webmanifest',BASE+'icons/icon-192.png',BASE+'icons/icon-512.png'];
 self.addEventListener('install', event=>{
